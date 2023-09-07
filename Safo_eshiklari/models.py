@@ -19,7 +19,7 @@ class ManagerUser(BaseUserManager):
         user.set_password(password)
         user.save()
         return user
-
+# hgjhgjhgjhgjhgjhgjhghjgj
     def create_superuser(self, username, password, **kwargs):
         return self.create_user(username, password, is_superuser=True, is_staff=True, **kwargs)
 
@@ -51,7 +51,7 @@ class Products(models.Model):
     img = models.ImageField()
 
     def __str__(self):
-        return self.product_id
+        return self.product_id, self.ctg, self.style
 
 class Contact(models.Model):
     name = models.CharField(max_length=128)
